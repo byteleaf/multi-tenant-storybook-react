@@ -6,9 +6,6 @@ import { Button } from './Button'
 export default {
   title: 'Example/Button',
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as Meta
 
 const Template: Story = args => <Button {...args}>click mich</Button>

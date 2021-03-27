@@ -2,9 +2,16 @@ import React from 'react'
 import styled, { ThemedStyledInterface, ThemeProvider as Provider } from 'styled-components'
 
 export interface Theme {
-  mainColor: string
-  fontColor: string
-  buttonBorderRadius: string
+  fontFamily: string
+  button: {
+    color: string
+    radius: string
+    backgroundColor: string
+    backgroundImage: string
+    padding: string
+    fontSize: string
+    border: string
+  }
 }
 
 interface ThemeProviderProps {
@@ -16,4 +23,4 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ theme, children })
   return <Provider theme={theme}>{children}</Provider>
 }
 
-export const themeStyled = styled as ThemedStyledInterface<Theme>
+export const styledWithTheme = styled as ThemedStyledInterface<Theme>

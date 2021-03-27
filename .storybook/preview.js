@@ -1,39 +1,39 @@
 import React from 'react'
 import { ThemeProvider } from '../src/styles/ThemeProvider'
-import { germanTheme, englishTheme, japaneseTheme } from '../src/styles/themes'
+import { defaultTenant, modernTenant, fancyTenant } from '../src/styles/themes'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
 }
 
 export const globalTypes = {
-  theme: {
-    name: 'Theme',
-    description: 'Theme',
-    defaultValue: 'german',
+  tenant: {
+    name: 'Tenant',
+    description: 'Tenant',
+    defaultValue: 'default',
     toolbar: {
       icon: 'globe',
       items: [
-        { value: 'german', title: '🇩🇪 Deutsch' },
-        { value: 'english', title: '🇬🇧 English' },
-        { value: 'japanese', title: '🇯🇵 日本語' },
+        { value: 'default', title: 'default tenant', left: '👩' },
+        { value: 'modern', title: 'modern tenant', left: '👩‍💼' },
+        { value: 'fancy', title: 'fancy tenant', left: '👩‍🎨' },
       ],
     },
   },
 }
 
-const withThemeProvider = (Story, { globals: { theme } }) => {
+const withThemeProvider = (Story, { globals: { tenant } }) => {
   let selectedTheme
-  switch (theme) {
+  switch (tenant) {
     default:
-    case 'german':
-      selectedTheme = germanTheme
+    case 'default':
+      selectedTheme = defaultTenant
       break
-    case 'english':
-      selectedTheme = englishTheme
+    case 'modern':
+      selectedTheme = modernTenant
       break
-    case 'japanese':
-      selectedTheme = japaneseTheme
+    case 'fancy':
+      selectedTheme = fancyTenant
       break
   }
 

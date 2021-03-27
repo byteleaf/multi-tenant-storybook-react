@@ -1,10 +1,10 @@
 import React from 'react'
 import { ThemeProvider } from './styles/ThemeProvider'
-import { germanTheme } from './styles/themes'
+import { defaultTenant } from './styles/themes'
 import { Button } from './components/Button'
 
 const App = () => (
-  <ThemeProvider theme={germanTheme}>
+  <ThemeProvider theme={defaultTenant}>
     <h1>Byteleaf</h1>
     <Button>Test</Button>
   </ThemeProvider>
