@@ -11,7 +11,3 @@ export default {
 const Template: Story = args => <Button {...args}>click mich</Button>
 
 export const Default = Template.bind({})
-Default.args = {
-  primary: true,
-  label: 'Button',
-}

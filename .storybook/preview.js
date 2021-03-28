@@ -8,8 +8,6 @@ export const parameters = {
 
 export const globalTypes = {
   tenant: {
-    name: 'Tenant',
-    description: 'Tenant',
     defaultValue: 'default',
     toolbar: {
       icon: 'globe',
